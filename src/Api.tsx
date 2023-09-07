@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IProducts } from "./models/IProduct";
+import { IProducts, Product } from "./models/IProduct";
 
 const baseURL = 'https://dummyjson.com/'
 const config = axios.create({
@@ -11,4 +11,10 @@ const config = axios.create({
 
 export const getAllProducts = () => {
     return config.get<IProducts>("products")
+}
+
+// get single product
+
+export const getProductById = ( id: number ) => {
+    return config.get<Product>("products/"+id)
 }
