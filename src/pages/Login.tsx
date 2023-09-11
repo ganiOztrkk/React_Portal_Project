@@ -3,12 +3,10 @@ import Header from '../components/Header'
 import login_img from '../assets/login_img.jpg'
 import { login } from '../Api'
 import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
 import { encrypt } from '../util'
 
 function Login() {
 
-  const navigate = useNavigate()
   const [email, setEmail] = useState('kminchelle')
   const [password, setPassword] = useState('0lelplR')
   const fncLoginForm = (evt:FormEvent) => {
